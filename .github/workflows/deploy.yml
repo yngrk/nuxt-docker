@@ -21,6 +21,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
           script: |
-            cd /path/to/your/project
+            cd ${{ secrets.WORK_DIR }}
             git pull
             docker-compose up --build -d
